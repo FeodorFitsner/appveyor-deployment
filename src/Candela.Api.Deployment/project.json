@@ -1,0 +1,38 @@
+{
+    "webroot": "wwwroot",
+    "version": "0.1.0-alpha1",
+    "description": "Appveyor Deployment Sample: API",
+    "authors": [ "Candela Software Technologies, LLC" ],
+
+    "dependencies": {
+        "Microsoft.AspNet.Mvc": "6.0.0-beta6",
+        "Microsoft.AspNet.Server.IIS": "1.0.0-beta6",
+        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta6",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-beta6",
+        "Microsoft.Framework.Configuration.Json": "1.0.0-beta6",
+        "Microsoft.Framework.Logging": "1.0.0-beta6",
+        "Microsoft.Azure.AppService.ApiApps.Service": "0.9.64",
+        "Swashbuckle": "6.0.0-beta6"
+    },
+
+    "commands": {
+        "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --server.urls http://localhost:5000"
+    },
+
+    "frameworks": {
+        "dnx46": { }
+    },
+
+    "exclude": [
+        "wwwroot",
+        "node_modules",
+        "bower_components"
+    ],
+    "publishExclude": [
+        "node_modules",
+        "bower_components",
+        "**.xproj",
+        "**.user",
+        "**.vspscc"
+    ]
+}

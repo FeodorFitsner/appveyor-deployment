@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/schemas/2014-11-01/apiapp.json#",
+    "id": "Appveyor Deployment",
+    "namespace": "candela.services",
+    "gateway": "2015-08-06",
+    "version": "0.1.0-alpha1",
+    "title": "Appveyor Deployment Sample: API",
+    "summary": "Appveyor Deployment Sample: API",
+    "author": "Candela Software Technologies, LLC",
+    "endpoints": {
+        "apiDefinition": "/swagger/docs/v1",
+        "status": null
+    }
+}
