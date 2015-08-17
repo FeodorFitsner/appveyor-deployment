@@ -9,7 +9,7 @@ build_script:
 - dnu publish "src\Candela.Api.Deployment" --out "%temp%\AppPackage" --configuration Release --runtime dnx-clr-win-x86.1.0.0-beta6 --wwwroot-out "wwwroot" --quiet
 
 artifacts:
-- path: %temp%\AppPackage
+- path: '%temp%\AppPackage'
   name: AppPackage
 
 test: off
