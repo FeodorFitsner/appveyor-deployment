@@ -4,9 +4,7 @@ install:
 build_script:
 - dnvm install 1.0.0-beta6
 - dnu restore
-#- dnx --appbase "src\Candela.Api.Deployment" "%userprofile%\.dnx\runtimes\dnx-clr-win-x86.1.0.0-beta6\bin\lib\Microsoft.Framework.PackageManager\Microsoft.Framework.PackageManager.dll" pack "src\Candela.Api.Deployment" --configuration Release --out "artifacts\bin\Api.Deployment"
 - dnu publish "src\Candela.Api.Deployment" --out DeployPackage --configuration Release --runtime dnx-clr-win-x86.1.0.0-beta6 --wwwroot-out "wwwroot" --quiet
-- dir DeployPackage
 
 artifacts:
 - path: DeployPackage
