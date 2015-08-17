@@ -2,6 +2,8 @@ install:
 - set path=%userprofile%\.dnx\runtimes\dnx-clr-win-x86.1.0.0-beta6\bin\;%path%
 
 build_script:
-- dnx --appbase "src\Candela.Api.Deployment" "%userpforile%\.dnx\runtimes\dnx-clr-win-x86.1.0.0-beta6\bin\lib\Microsoft.Framework.PackageManager\Microsoft.Framework.PackageManager.dll" pack "src\Candela.Api.Deployment" --configuration Release --out "artifacts\bin\Api.Deployment"
-- dnu publish "src\Candela.Api.Deployment" --out "%temp%\PublishTemp" --configuration Release --runtime dnx-clr-win-x86.1.0.0-beta6 --wwwroot-out "wwwroot" --quiet
-- dir %temp%\PublishTemp
+- nuget restore "Appveyor Deployment.sln"
+- dnvm install 1.0.0-beta6
+#- dnx --appbase "src\Candela.Api.Deployment" "%userpforile%\.dnx\runtimes\dnx-clr-win-x86.1.0.0-beta6\bin\lib\Microsoft.Framework.PackageManager\Microsoft.Framework.PackageManager.dll" pack "src\Candela.Api.Deployment" --configuration Release --out "artifacts\bin\Api.Deployment"
+#- dnu publish "src\Candela.Api.Deployment" --out "%temp%\PublishTemp" --configuration Release --runtime dnx-clr-win-x86.1.0.0-beta6 --wwwroot-out "wwwroot" --quiet
+#- dir %temp%\PublishTemp
