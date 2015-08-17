@@ -2,7 +2,7 @@ install:
 #- set path=%userprofile%\.dnx\runtimes\dnx-clr-win-x86.1.0.0-beta6\bin\;%path%
 
 build_script:
-- nuget restore src\Candela.Api.Deployment\project.json
+#- nuget restore src\Candela.Api.Deployment\project.json
 - dnvm install 1.0.0-beta6
 - dnu restore
 - dnx --appbase "src\Candela.Api.Deployment" "%userprofile%\.dnx\runtimes\dnx-clr-win-x86.1.0.0-beta6\bin\lib\Microsoft.Framework.PackageManager\Microsoft.Framework.PackageManager.dll" pack "src\Candela.Api.Deployment" --configuration Release --out "artifacts\bin\Api.Deployment"
